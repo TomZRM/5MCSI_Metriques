@@ -2,53 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactez-moi</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background: #f7f7f7;
             margin: 0;
             padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
         .contact-form {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 500px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .form-group label {
             display: block;
+            color: #666;
             margin-bottom: 5px;
         }
         .form-group input[type="text"],
         .form-group textarea {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
+            border-radius: 5px;
             border: 1px solid #ddd;
-            border-radius: 4px;
             box-sizing: border-box;
         }
         .form-group textarea {
-            resize: vertical;
-            height: 100px;
+            resize: none;
+            height: 150px;
         }
         button[type="submit"] {
-            background: #5cb85c;
-            color: white;
+            width: 100%;
+            background: #007bff;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
+            transition: background 0.3s ease-in-out;
         }
         button[type="submit"]:hover {
-            background: #4cae4c;
+            background: #0056b3;
         }
     </style>
 </head>
@@ -58,15 +69,15 @@
         <form>
             <div class="form-group">
                 <label for="first-name">Prénom</label>
-                <input type="text" id="first-name" name="first-name">
+                <input type="text" id="first-name" name="first-name" required>
             </div>
             <div class="form-group">
                 <label for="last-name">Nom</label>
-                <input type="text" id="last-name" name="last-name">
+                <input type="text" id="last-name" name="last-name" required>
             </div>
             <div class="form-group">
                 <label for="message">Votre Message</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" required></textarea>
             </div>
             <button type="submit">Envoyer</button>
         </form>
