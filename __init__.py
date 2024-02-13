@@ -8,10 +8,6 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
-@app.route('/contact/')
-def contact():
-    return "<h2>Ma page de contact</h2>"
-
 @app.route('/tawarano/')
 def tawarano():
     # Remplacez 'xxx' par votre clé API réelle pour OpenWeatherMap si vous en avez une.
