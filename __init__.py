@@ -33,22 +33,7 @@ def histogramme():
 
 @app.route("/commits/")
 def mescommits():
-    # Effectuez une requête GET à l'API GitHub pour obtenir les données de commit
-    commit_data = requests.get('https://api.github.com/repos/TomZRM/5MCSI_Metriques/commits').json()
-    
-    # Préparez les données pour le graphique
-    commit_times = []  # Ceci va stocker nos données formatées pour le graphique
-
-    for commit in commit_data:
-        # Convertissez la date en un objet datetime, puis en une chaîne lisible
-        date_str = commit['commit']['committer']['date']
-        date_obj = datetime.strptime(date_str, '%Y-%m-%dT%H:%M:%SZ')
-        
-        # Vous pouvez choisir de grouper par heure ou par jour, selon vos besoins
-        commit_times.append([date_obj.strftime('%Y-%m-%d %H:%M'), 1])
-    
-    # Passez les données de commit au template
-    return render_template("commits.html", commit_times=commit_times)
+    return render_template("commits.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
