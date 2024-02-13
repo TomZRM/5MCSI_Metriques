@@ -35,14 +35,6 @@ def histogramme():
 def contact():
     return render_template('contact.html')
 
-from flask import Flask, render_template, jsonify
-import requests
-from datetime import datetime
-
-app = Flask(__name__)
-
-# ... vos autres routes ...
-
 @app.route('/commits/')
 def commits():
     commit_data = requests.get('https://github.com/TomZRM/5MCSI_Metriques/blob/main/templates/commits.html').json()
