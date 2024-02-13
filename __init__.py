@@ -39,5 +39,10 @@ def contact():
 def mescommits():
     return render_template("commits.html")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # Note: e est l'objet d'erreur passé par Flask
+    return render_template('404.html'), 404
+
 if __name__ == "__main__":
     app.run(debug=True)
