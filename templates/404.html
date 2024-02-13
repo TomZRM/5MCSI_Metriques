@@ -1,15 +1,52 @@
-<!-- templates/404.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erreur 404</title>
+    <title>Page Non Trouvée</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            color: #d9534f;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #286090;
+        }
+        .error-container {
+            margin-top: 50px;
+        }
+        .error-container img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Oups! Page non trouvée.</h1>
-    <p>Il semble que la page que vous cherchez n'existe pas.</p>
-    <a href="/">Retourner à l'accueil</a>
+    <div class="error-container">
+        <h1>Oups! Erreur 404</h1>
+        <p>La page que vous cherchez semble introuvable.</p>
+        <p>Vous avez peut-être mal tapé l'adresse ou la page a pu être déplacée.</p>
+        <a href="/">Retour à l'accueil</a>
+    </div>
 </body>
 </html>
