@@ -11,21 +11,21 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Jour', 'Température'],
-          // Supposons que ces données sont fictives, vous devrez les remplacer par des données réelles.
-          ['1', 21.5], 
-          ['2', 22.3],
-          // ... continuez avec des données pour les 16 prochains jours ...
+          ['1', 21.5], ['2', 22.3], ['3', 19.0], ['4', 17.5],
+          ['5', 18.4], ['6', 21.2], ['7', 20.3], ['8', 22.4],
+          ['9', 23.5], ['10', 24.6], ['11', 19.8], ['12', 18.0],
+          ['13', 17.0], ['14', 21.4], ['15', 22.8], ['16', 23.2]
         ]);
 
         var options = {
           title: 'Températures de Paris pour les 16 prochains jours',
           chartArea: { width: '50%' },
           hAxis: {
-            title: 'Jour',
+            title: 'Température (°C)',
             minValue: 0
           },
           vAxis: {
-            title: 'Température (°C)'
+            title: 'Jour'
           }
         };
 
