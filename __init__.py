@@ -31,6 +31,10 @@ def histogramme():
     # Rendre la page histogramme.html lorsque la route /histogramme/ est accédée
     return render_template('histogramme.html')
 
+@app.route('/contact/')
+def contact():
+    return render_template('contact.html')
+
 @app.route("/commits/")
 def mescommits():
     return render_template("commits.html")
