@@ -30,5 +30,10 @@ def rapport():
     # Cette fonction va rendre la page 'graphique.html' du dossier 'templates'.
     return render_template('graphique.html')
 
+@app.route('/histogramme/')
+def histogramme():
+    # Rendre la page histogramme.html lorsque la route /histogramme/ est accédée
+    return render_template('histogramme.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
